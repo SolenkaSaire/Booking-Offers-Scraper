@@ -1,0 +1,41 @@
+# Ignorar entornos virtuales
+venv/
+VENV/
+.env/
+
+# Ignorar archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar archivos de configuración y credenciales sensibles
+*.json
+!config/settings.json  # Si deseas incluir un archivo JSON específico
+token.json
+credentials.json
+config/secrets.json
+
+# Ignorar logs y archivos temporales
+*.log
+*.tmp
+
+# Ignorar configuraciones específicas de entornos de desarrollo
+.DS_Store
+.idea/
+*.iml
+.vscode/
+*.swp
+
+# Ignorar dependencias locales
+*.egg-info/
+*.egg
+pip-log.txt
+
+# Ignorar tests temporales
+tests/__pycache__/
+
+# Mantener archivos importantes en la raíz
+!main.py
+!requirements.txt
+!plot_hotels_data.py
+!script_auth.py
