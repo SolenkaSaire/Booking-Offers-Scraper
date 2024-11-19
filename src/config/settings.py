@@ -1,6 +1,6 @@
 #Creds
-USER_EMAIL = "cbastidasobregon@gmail.com"
-USER_PASS = "Aadmin123456"
+USER_EMAIL = "tucorreo@gmail.com"
+USER_PASS = "tucontraseña"
 
 
 # URL de Booking
@@ -14,4 +14,4 @@ WAIT_TIME = 3
 
 # Configuración del proxy
 PROXY_API_URL = "http://api.scraperapi.com"
-API_KEY = "e8d6d234f245225a53f4e2b7ba2a2b31" 
+API_KEY = "tuapikey" 
