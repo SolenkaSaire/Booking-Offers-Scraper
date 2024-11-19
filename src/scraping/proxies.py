@@ -4,12 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import time
-
-# Configuración del Proxy de Bright Data
-PROXY_HOST = "brd.superproxy.io"
-PROXY_PORT = "22225"
-PROXY_USER = "brd-customer-hl_4c619868-zone-residential_proxy1"
-PROXY_PASSWORD = "jlppy2v5y6zu"
+from config.settings import PROXY_HOST, PROXY_PORT, PROXY_USER, PROXY_PASSWORD
 
 def create_proxy_extension(proxy_host, proxy_port, proxy_user, proxy_password):
     manifest_json = """

@@ -3,6 +3,8 @@ from googleapiclient.discovery import build
 import base64
 import re
 import os
+from config.settings import USER_EMAIL
+
 
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
@@ -56,8 +58,7 @@ def get_verification_link(user_email):
         return None
 
 if __name__ == "__main__":
-    user_email = "cbastidasobregon@gmail.com"
-    verification_link = get_verification_link(user_email)
+    verification_link = get_verification_link(USER_EMAIL)
     if verification_link:
         print(f"Enlace de verificación encontrado: {verification_link}")
     else:

@@ -1,8 +1,8 @@
 from selenium.webdriver.common.by import By 
 import requests
 import time
+from config.settings import API_KEY_CAPTCHA
 
-API_KEY = 'dcd85933530c4a0c9d2fe6c78ad5c09d'
 
 def solve_aws_waf_captcha(driver, url):
     try:
@@ -24,7 +24,7 @@ def solve_aws_waf_captcha(driver, url):
     response = requests.post(
         "https://api.anti-captcha.com/createTask",
         json={
-            "clientKey": API_KEY,
+            "clientKey": API_KEY_CAPTCHA,
             "task": {
                 "type": "ImageToTextTask",
                 "body": requests.get(captcha_image_url).content.decode('base64')
@@ -44,7 +44,7 @@ def solve_aws_waf_captcha(driver, url):
         result = requests.post(
             "https://api.anti-captcha.com/getTaskResult",
             json={
-                "clientKey": API_KEY,
+                "clientKey": API_KEY_CAPTCHA,
                 "taskId": task_id
             }
         )
